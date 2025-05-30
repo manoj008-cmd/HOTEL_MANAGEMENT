@@ -1,0 +1,38 @@
+/* Front Page Styles */
+.front-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    color: #fff; /* White text for contrast against the dark background */
+}
+
+.front-page-container h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+}
+
+.front-page-container p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.front-page-container .login-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #1e88e5; /* Match the button color from form.css */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.front-page-container .login-btn:hover {
+    background-color: #1565c0; /* Match the hover color from form.css */
+}

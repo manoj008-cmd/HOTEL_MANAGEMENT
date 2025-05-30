@@ -1,0 +1,114 @@
+.form-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    transition: border-bottom 0.3s ease;
+}
+
+.form-group input:focus {
+    border-bottom: 2px solid #26a69a;
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: #666;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #26a69a;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    accent-color: #26a69a;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0288d1;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0277bd;
+}
+
+/* Ripple Effect on Button Click */
+button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+button:active::after {
+    width: 200px;
+    height: 200px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    color: #0288d1;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #26a69a;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
